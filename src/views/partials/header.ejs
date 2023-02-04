@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="/css/header.css">
+
+
+<header>
+    <div class="main-header-top-bar">
+        <div class="top-header">
+            <!-- <a href="./" class="logo"> Pixel!</a> LOGO ALTERNATIVO-->
+            <a onclick="location.href='/';" class="logo1"> <img src="/img/pixel-logo.png" alt="logo"></a>
+            <!-- logo-mobile -->
+            <a onclick="location.href='/';" class="logo2"> <img src="/img/logo-pixel-mobile.png" alt="logo"></a>
+            <form action='/product/results' method="get" class="search-bar">
+                <input type="text" placeholder="Buscar monitores, teclados, notebooks" name="keyWord">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        </form>
+        <div class="icons-top-bar">
+            <% if (locals.isLogged) { %>
+                <a href="/user/profile"><i class="fa-regular fa-user"></i>
+                    <%= locals.userLogged.fullName %>
+                </a>
+                <a href="/user/logout"> Logout </a>
+                <% } else { %>
+                    <a href="/user/login" class="icon-user"><i class="fa-regular fa-user"></i> Ingresar</a>
+                    <a href="/user/register" class="icon-user">Registrarse</a>
+
+                    <% } %>
+                        <a href="/user/productCart" class="carrito-icon"><i class="fa badge" value=2>&#xf07a;</i></a>
+        </div>
+    </div>
+
+    <nav class="nav-burger"> <!-- CLASS NAV -->
+        <div class="nav-burger-container"> <!-- CLASS NAV__CONTAINER -->
+            <label for="menu" class="nav-burger-label"> <!-- CLASS NAV__LABEL -->
+                <img src="/img/icon-burger.svg" alt="" class="burger-img"> <!-- CLASS NAV__IMG -->
+            </label>
+            <input type="checkbox" id="menu" class="nav-burger-input"> <!-- CLASS NAV__INPUT -->
+
+            <div class="nav-menu-burger"> <!-- CLASS NAV__MENU -->
+                <a href="/product/list" class="nav-burger-item">Productos</a> <!-- CLASS NAV__ITEM -->
+                <a href="#" class="nav-burger-item">Arma tu PC</a> <!-- CLASS NAV__ITEM -->
+                <a href="#" class="nav-burger-item">PC Armados</a>
+                <a href="/nosotros" class="nav-burger-item">Nosotros</a>
+                <a href="#" class="nav-burger-item">Ayuda</a> <!-- CLASS NAV__ITEM -->
+            </div>
+        </div>
+    </nav>
+
+
+    <nav class="nav-bar">
+
+        <a href="/product/list">
+            <div class="nav-bar-button">
+                <p>Productos</p>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="nav-bar-button">
+                <p>Arma tu PC</p>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="nav-bar-button">
+                <p>PC listos</p>
+            </div>
+        </a>
+
+        <a href="/nosotros">
+            <div class="nav-bar-button">
+                <p>Nosotros</p>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="nav-bar-button">
+                <p>Ayuda</p>
+            </div>
+        </a>
+    </nav>
+
+</header>

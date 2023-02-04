@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/productDetail.css"> <!-- OJO SE LE PUSO ../ PREGUNTAR -->
+    <title>Detalle Producto</title>
+
+    <script>
+        function thumbChange(n){
+            if (n==0){
+                let thumb="../../img/<%= producto.img %>";
+                document.getElementById('mainImg').src= thumb;
+            } else {
+                let thumb="../../img/hp"+n+".png"
+                document.getElementById('mainImg').src= thumb;
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <%- include('./partials/header'); %>
+    <main>
+
+        <section class="route-container">
+            <h2 class="route-text"><%= producto.titulo %> </h2>
+        </section>
+        <section class="main-container">
+            <div class="images">
+                <div class="main-image">
+                    <img id='mainImg' class="prod-image" src="../../img/<%= producto.img %>" alt="img_hp">
+                </div>
+                <div class="container-views">
+                    <img id="thumb0" onclick="thumbChange(0)" class="view_prod" src="../../img/<%= producto.img %>" alt="img_hp0">
+                    <img id="thumb1" onclick="thumbChange(1)" class="view_prod" src="../../img/hp1.png" alt="img_hp1">
+                    <img id="thumb2" onclick="thumbChange(2)" class="view_prod" src="../../img/hp2.png" alt="img_hp2">
+                    <img id="thumb3" onclick="thumbChange(3)" class="view_prod" src="../../img/hp3.png" alt="img_hp3">
+                </div>
+            </div>
+            <% let valorFinal=producto.precio-(producto.precio*producto.descuento)/100 %>
+            <div class="text-options">
+                <div class="box_texto_pago">
+                    <h3 class="subtitulo_texto_pago">Precio</h3>
+                    <p class="final-value">$<%= valorFinal.toFixed(0) %> </p>
+
+                    <% if (producto.descuento!=0) { %>
+                    <div class="discount-container">
+                        <p class="price">$<%= producto.precio %> </p>
+                        <p class="discount"><%= producto.descuento %> %OFF </p>
+                    </div>
+                    <% } else { %>
+                        <br>
+                        
+                    <% } %>
+
+                </div>
+                <div class="box_texto_pago">
+                    <h3 class="subtitulo_texto_pago">Descripción</h3>
+                    <p class="texto_pago"> <%=producto.descripcionCorta%> </p>
+                </div>
+                <div class="box_texto_pago">
+                    <h3 class="subtitulo_texto_pago">Medios de Pago</h3>
+                    <p class="texto_pago"> Tarjetas de Credito, debito, Mercado Pago, Transferencia Bancaria
+                    </p>
+                </div>
+
+                <div class="box_texto_pago">
+                    <h3 class="subtitulo_texto_pago">Formas de retiro</h3>
+                    <p class="texto_pago">Recoger en nuestras sucursales o Envío gratuito a todo el país
+                    </p>
+                </div>
+                <div class="button-container">
+                    <a href="/user/productCart"><button class="btn_compra">Agregar al carrito</button></a>
+                </div>
+
+
+            </div>
+
+        </section>
+        <section class="container-description">
+            <h3 class="titulo_descripcion_prod">Descripción el Producto</h3>
+            <p class="prod-description"><%= producto.longDesc %> </p>
+
+        </section>
+        <section class="product-atributes">
+            <h3 class="titulo_descripcion_prod">Características</h3>
+            <div class="container-atributes">
+                <div class="atribute">
+                    <h2>Almacenamiento</h2>
+                    <p>1 TB</p>
+                    <p>Solid state</p>
+                </div>
+                <div class="atribute">
+                    <h2>RAM</h2>
+                    <p>4 GB</p>
+                    <p>Expandible</p>
+                </div>
+
+                <div class="atribute">
+                    <h2>Pantalla</h2>
+                    <p>15.6"</p>
+                    <p>LED 1366x768</p>
+                </div>
+                <div class="atribute">
+                    <h2>Conectividad</h2>
+                    <p>Wi-fi</p>
+                    <p>Bluetooth</p>
+                </div>
+                <div class="atribute">
+                    <h2>Procesador</h2>
+                    <p>3.10 Ghz</p>
+                    <p>Caché: 4 Mb</p>
+                </div>
+                <div class="atribute">
+                    <h2>Sistema operativo</h2>
+                    <p>Windows 10 64 bits</p>
+                </div>
+            </div>
+
+        </section>
+        <%- include('./partials/whatsapp'); %>
+
+    </main>
+    <%- include('./partials/footer'); %>
+</body>
+
+</html>

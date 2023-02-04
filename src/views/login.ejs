@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:ital@1&family=Roboto:ital,wght@0,100;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Ingresa</title>
+</head>
+
+<body>
+    <!-- HEADER AND NAV BAR -->
+    <%- include('./partials/header'); %>
+
+        <!-- WHATSAPP -->
+        <%- include('./partials/whatsapp'); %>
+            <main>
+                <!-- ingresa -->
+                <div class="mover">
+                    <form action="/user/login" method="POST" class="form-login" id="formLogin">
+                        <h5>Iniciar sesión con mi email</h5>
+                        <!--<input class="cajita" type="checkbox" name="" value="">  -->
+                        <ul id="erroresLogin" style="border-radius: 10px; color: #FF4949; padding: 5px; list-style-type: none; text-align: center;"></ul>
+                        <input class="controls <%= locals.errors && errors.email ? 'invalido' : null%> "  type="text"  name="email" value="<%= locals.oldData ? oldData.email : null %>"
+                            placeholder="Email" id="emailLogin" >
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="mensaje-de-error">
+                                    <i class="fas fa-exclamation-triangle"></i><%= errors.email.msg %> 
+                                </div> 
+                                <% } %> 
+                        <input class="controls <%= locals.errors && errors.password ? 'invalido' : null%> " type="password"  name="password"
+                            value="" placeholder="Contraseña" autocomplete="current-password" id="passwordLogin">
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="mensaje-de-error">
+                                    <i class="fas fa-exclamation-triangle"></i><%= errors.password.msg %> 
+                                </div>                               
+                                <% } %> 
+                                <div class="rememberMe">
+                                    <input type="checkbox" name="rememberMe" id="rememberMe">
+                                    <label class="labelCheckbox" for="rememberMe">Recordar mi usario</label>
+                                </div>
+                        <div class="texto-login">
+                            <a class="registrarme" ; padding: 6px;; href="/user/register"> Registrame</a>
+                            <a class="contraseña" ; href="#"> ¿Olvidaste tu Contraseña?</a>                   
+                        </div>
+                        <div class="button-container">
+                            <a style="text-decoration: none;" href="/index"><button type="submit"
+                                    style="color: #000;">LOGIN</button></ona>
+                        </div>
+                        <p></p>
+                        <div class="social">
+                            <h5 class="google" style="padding-bottom: 32px">Ingresar con Google
+                                <i class="fab fa-google"></i>
+                            </h5>
+                            <h5 class="facebook" style="padding-bottom: 32px;">Ingresar con Facebook
+                                <i class="fab fa-facebook-square"></i>
+                            </h5>
+                        </div>
+                    </form>
+                </div>
+
+            </main>
+            <!-- FOOTER -->
+            <%- include('./partials/footer'); %>
+
+            <script src="/js/validatorLogin.js"></script>
+</body>
+
+</html>

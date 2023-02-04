@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:ital@1&family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <title>Pixel E-Comerce</title>
+</head>
+
+<body>
+
+    <!-- HEADER AND NAVIGATION BAR-->
+    <%- include('partials/header') %>
+        <!-- BANNER -->
+<!-- NEW BANNER SLIDER -->
+<div class="banner">
+    <div class="container-all">
+        <input type="radio" name="image-slide" id="1" hidden>
+        <input type="radio" name="image-slide" id="2" hidden>
+        <input type="radio" name="image-slide" id="3" hidden>
+
+        <div class="slide">
+            <div class="item-slide">
+                <img src="/img/banner1.jpg" alt="img1">
+            </div>
+            <div class="item-slide">
+                <img src="/img/banner2.jpg" alt="img2">
+            </div>
+            <div class="item-slide">
+                <img src="/img/banner3.jpg" alt="img3">
+            </div>
+
+        </div>
+
+        <div class="pagination">
+
+            <label for="1" class="pagination-item">
+                <img src="/img/banner1.jpg" alt="img1">
+            </label>
+            <label for="2" class="pagination-item">
+                <img src="/img/banner2.jpg" alt="img2">
+            </label>
+            <label for="3" class="pagination-item">
+                <img src="/img/banner3.jpg" alt="img2">
+            </label>
+
+
+        </div>
+
+    </div>
+</div>
+        <main>
+
+            <section class="inSale">
+                <h2>LO MEJOR DEL DÍA</h2>
+                <div class="products">
+                    <% // Shuffle array
+                    let shuffled = productos.sort(() => 0.5 - Math.random());
+                    
+                    // Get sub-array of first n elements after shuffled
+                    let n=8;
+                    let selected = shuffled.slice(0, n); %> 
+
+                    <% selected.forEach(producto => { %>
+                    <% let valorFinal=producto.precio-(producto.precio*producto.descuento)/100 %> 
+                     
+                    
+                    <article onclick="location.href='/product/detail/<%=producto.id%>';" style="cursor: pointer;">
+                        <img src="/img/<%= producto.img %>" alt="producto" class="prod-image">
+                        <div class="container-product">
+                        <div class="productInfo">
+                            <p class="final-value">$<%= valorFinal.toFixed(0) %></p>
+                            <a href="/product/detail" class="description"><%= producto.titulo %></a>
+                        </div>
+
+                        <div class="price-discount">
+                            <% if (producto.descuento!=0) { %>
+                                <p class="price">$<%= producto.precio %></p>
+                                <p class="discount"><%= producto.descuento %> %off</p> 
+                            <% } else { %>
+                                <br>
+                                
+                            <% } %>
+                        </div>
+                    </div>
+                    </article>
+                    <% }) %>
+
+        <section class="recomended">
+            <h2>RECOMENDACIONES</h2>
+            <div class="products">
+                <% // Shuffle 
+                    discount=productos.filter(producto =>producto.descuento!=0)
+                    shuffled = discount.sort(() => 0.5 - Math.random());
+                    
+                    // Get sub-array of first n elements after shuffled
+                    n=4;
+                    selected = shuffled.slice(0, n); %> 
+
+                    <% selected.forEach(producto => { %>
+                    <% let valorFinal=producto.precio-(producto.precio*producto.descuento)/100 %> 
+                    <article onclick="location.href='/product/detail/<%=producto.id%>';" style="cursor: pointer;">
+                        <img src="/img/<%= producto.img %>" alt="producto" class="prod-image">
+                        <div class="container-product">
+                        <div class="productInfo">
+                            <p class="final-value">$<%= valorFinal.toFixed(0) %></p>
+                            <a href="/product/detail" class="description"><%= producto.titulo %></a>
+                        </div>
+
+                        <div class="price-discount">
+                            <% if (producto.descuento!=0) { %>
+                                <p class="price">$<%= producto.precio %></p>
+                                <p class="discount"><%= producto.descuento %> %off</p> 
+                            <% } else { %>
+                                <br>
+                                
+                            <% } %>
+                        </div>
+                    </div>
+                    </article>
+                <% }) %>
+            </div>
+        </section>
+
+
+
+    </main>
+
+        <!-- WHATSAPP -->
+            <%- include('./partials/whatsapp'); %>
+
+        <!-- FOOTER -->
+        <%- include('./partials/footer'); %>
+
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400&display=swap');
+
+.top-header {
+    display: flex;
+    width: 100%;
+}
+
+.logo2 img {
+    height: 70px;
+    margin-right: 40px;
+}
+
+.logo1 {
+    display: none;
+    height: 100px;
+    position:relative
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(66, 66, 66, 0.3);
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: auto;
+    box-shadow: 0px 0px 5px 0px #5c5c5c;
+}
+
+.search-bar input {
+    background-color: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-size: 12px;
+    color: #cac7ff;
+    padding: 5px
+}
+
+.search-bar input::placeholder {
+    color: #cac7ff
+}
+
+.search-bar button i {
+    font-size: 14px;
+    color: #cac7ff
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(128, 255, 0, 0.7);
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: rgba(108, 216, 0, 0.7);
+}
+
+
+.main-header-top-bar {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    width: 100%;
+
+}
+
+.icons-top-bar a {
+    display: flex;
+    text-decoration: none;
+    color: #7EFF00;
+    background: rgba(66, 66, 66, 0.3);
+    margin: 5px;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 14px;
+    align-items: center;
+    padding: 10px
+}
+
+.icons-top-bar a:hover{
+    background-color: rgba(66, 66, 66, 0.1) ;
+}
+
+.icons-top-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 15px;
+}
+
+.icons-top-bar a i {
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.badge:after {
+    content: attr(value);
+    /* value is the number displayed next to the cart */
+    font-size: 10px;
+    background: red;
+    border-radius: 50%;
+    padding: 4px;
+    position: relative;
+    left: -4px;
+    top: -16px;
+    opacity: 0.9;
+}
+
+/* NAVIGATION BAR */
+
+.nav-bar {
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    display: none;
+    box-shadow: 0rem 0.6rem 2rem 0.5rem #7EFF00;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #cac7ff;
+}
+
+.nav-bar-button {
+    background-color: #4A4A4A;
+    padding: 10px;
+    width: 110px;
+    text-align: center;
+    margin: 5px 0;
+    border-radius: 15px;
+    transition: all 400ms ease;
+}
+
+.nav-bar-button:hover {
+    color: #4A4A4A;
+    background-color: #7EFF00;
+}
+
+
+/* BURGUER MENU */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nav-burger-input:checked + .nav_menu-burger {
+    background-color: #4A4A4A;
+}
+
+
+.nav-burger {
+    background-color: #000;
+    height: 80px;
+    color: white;
+}
+
+.nav-burger-input {
+    display: none;
+}
+
+
+.nav-burger-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px 3px #7EFF00;
+}
+
+
+.nav-burger-label{
+    display: block;
+    background-color: #7EFF00;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    transition: all 0.4s;
+}
+
+.nav-burger-label:hover{
+    transform: scale(0.95);
+    background-color: #52aa00;
+}
+
+.burger-img {
+    width: 40px;
+}
+
+.nav-menu-burger{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.nav-burger-item {
+    color: white;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+
+.nav-burger-item:hover{
+   --clippy: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+
+.nav-burger-label{
+    display: block;
+    cursor: pointer;
+}
+
+.nav-menu-burger{
+    position: absolute;
+    top: 245px;
+    bottom: 0;
+    background:rgb(37, 37, 37);
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #7EFF00;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.6s;
+    z-index: 100;
+}
+
+.nav-menu-burger a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 18px;
+    width: 80%;
+    height: 40px;
+    border-bottom: 1px solid #626262;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nav-menu-burger a:hover {
+    width: 70%;
+    border-bottom: 1px solid #7EFF00;
+}
+
+
+.nav-burger-input:checked + .nav-menu-burger {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+}
+
+
+
+
+@media (min-width: 767px) {
+
+    .logo2 img {
+        display: none;
+        height: 100px;
+    }
+
+    .logo1 {
+        display: flex;
+        height: 80px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .main-header-top-bar {
+        display: flex;
+        flex-direction: row;
+        border-bottom: solid 1px #6d6d6d;
+        padding: 10px;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 50%;
+    }
+
+    .icons-top-bar {
+        display: flex;
+        align-items: center;
+        width: 55%;
+        justify-content: flex-end;
+    }
+
+    .icons-top-bar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        background: rgba(66, 66, 66, 0.3);
+        margin: 5px;
+        color: #7EFF00;
+        font-size: 13px;
+        height: 30px;
+        width: 80px;
+        border-radius: 5px;
+    }
+
+    .icons-top-bar a i{
+        font-size: 10px;
+        margin-right: 3px;
+    }
+
+    .carrito-icon{
+        display: flex;
+        justify-content: center;
+        width: 35px !important;
+    }
+
+    .carrito-icon i {
+        font-size: 10px;
+    }
+
+
+    .nav-bar {
+        display: flex
+    }
+
+    .nav-burger-label{
+        display: none;
+    }
+
+    .nav-burger {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1020px) {
+
+    .search-bar {
+        width: 60%;
+        max-width: 700px;
+    }
+
+    .search-bar input::placeholder {
+        font-size: 14px;
+    }
+
+    .icons-top-bar {
+
+        width: 40%;
+    }
+
+    .icons-top-bar a{
+        height: 40px;
+        width: 100px;
+        font-size: 16px;
+    }
+
+    .carrito-icon {
+        width: 50px !important;
+    }
+
+    .carrito-icon i {
+        font-size: 18px !important;
+    }
+}

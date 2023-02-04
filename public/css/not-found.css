@@ -1,0 +1,29 @@
+
+body {background-image: url('../img//background/finalbackground.png')}
+
+*{box-sizing: border-box;
+margin: 0;
+padding: 0;}
+
+.cuadro{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-height: 100vh;
+   
+}
+h2{
+    text-align: center;
+    color: #7EFF00;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+@media (min-width: 767px){
+    .imagen{
+        max-width:800px;
+        
+    }
+    h2{font-size: 30px;}
+}

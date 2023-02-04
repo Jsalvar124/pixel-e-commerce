@@ -1,0 +1,541 @@
+[33mcommit 4907ce89793539b0eb10f24dfda7b6cc7fdf9dd3[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 20098a3 5b18ff8
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Thu Nov 17 14:01:06 2022 -0300
+
+    Merge branch 'main' of https://github.com/joaquinxtomas/grupo_12_Pixel
+
+[33mcommit 20098a3eff8b2755cb7ef861ef939983d0b7f764[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Thu Nov 17 14:00:44 2022 -0300
+
+    errores vista Profile
+
+[33mcommit 5b18ff899fc0ace926a8553bc0cd65c527f76b0f[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Thu Nov 17 01:24:34 2022 -0500
+
+    avatar
+
+[33mcommit be73ae0e6c012cef870ac6edd642a8eb9846f770[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Wed Nov 16 23:33:15 2022 -0500
+
+    se añade función de cambiar imagen principal en product detail
+
+[33mcommit 22bba69ed37a2f768059bf264b2a5bb591c69bc5[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Wed Nov 16 23:31:22 2022 -0300
+
+    profile y detalles
+
+[33mcommit c2fc85944d50593cfbeb821e7c0b2db78c69bdee[m
+Merge: 6e43ccb 841cc43
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Wed Nov 16 22:59:14 2022 -0300
+
+    Merge branch 'main' of https://github.com/joaquinxtomas/grupo_12_Pixel
+
+[33mcommit 6e43ccb34044fa9845bf62a2572a0cc8100ed60e[m
+Merge: 6538887 a609db2
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Wed Nov 16 22:59:10 2022 -0300
+
+    vistaProfile
+
+[33mcommit 841cc4323886e5cd3b403222a355714cbf5959ce[m
+Author: ezeeze87 <eze87.m@gmail.com>
+Date:   Wed Nov 16 22:23:28 2022 -0300
+
+    se agrega error 404 y direccionamiento en product detail
+
+[33mcommit 65388875ac8be02c05f6de99807e866d561c57b6[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Wed Nov 16 18:22:03 2022 -0300
+
+    vistaProfile
+
+[33mcommit a609db2af06b1c4561c15a254a10bcfe978ee936[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Wed Nov 16 15:56:39 2022 -0500
+
+    se añade middleware autenticación de admin, y de guest para impedir que un usuario logeado acceda a login o a register
+
+[33mcommit 2386cec73ad25e4ae4876346c43ea5b71ec71f0e[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Mon Nov 14 23:01:43 2022 -0500
+
+    boton agregar producto hover
+
+[33mcommit ea05805d03f7f9c0619cef682715d0120d28494f[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Mon Nov 14 22:50:30 2022 -0500
+
+    modificacion en botones, cuenta admin
+
+[33mcommit f5aeaf303b2a3c5c3aa626bb5cd3ae24cf9797ad[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Mon Nov 14 21:15:00 2022 -0500
+
+    modificaciones de aspecto menores
+
+[33mcommit 76fcff2c8e149f26117847c00a6c3140fc4b20ef[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Thu Oct 27 19:56:09 2022 -0300
+
+    Backgrounds
+
+[33mcommit 472baad1ff284ebb672fb6b3f80eb0d636677d8b[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Wed Oct 26 16:05:40 2022 -0500
+
+    se añade vista de productos para usuarios, se organizan las validaciones en middlewares
+
+[33mcommit 8665b6c8e3f03fac5de9ab42c796eb350d574973[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Tue Oct 25 22:31:12 2022 -0300
+
+    Unifico header register
+
+[33mcommit a09a3b63e7b0a97fb978d063632d6aab497849d4[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Tue Oct 25 02:10:15 2022 -0500
+
+    se añade funcionalidad del login, verificacion de email, contraseña, session y cookies
+
+[33mcommit b87095af7d57b7d8591e70424443ca40a1bf7600[m[33m ([m[1;33mtag: sprint4[m[33m)[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Mon Oct 24 20:22:13 2022 -0300
+
+    ultimos detalles
+
+[33mcommit 9eb1c36a8684a90cd8305ff9b0641ee14c294174[m
+Merge: 4eea0eb 4caebcc
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Mon Oct 24 19:32:51 2022 -0300
+
+    errores minimos
+
+[33mcommit 4eea0ebdc334e45176bd316b53990ca9e5d92ac9[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Mon Oct 24 19:31:31 2022 -0300
+
+    errores minimos
+
+[33mcommit 4caebcccd6fb5b5e95282ddeef5cad5ada118c44[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Mon Oct 24 17:17:57 2022 -0500
+
+    se arregla imagen en agregar producto
+
+[33mcommit 5197ce14bfbd1f00d9bba91d0fd3ce58a28f357e[m
+Merge: 3aaff96 cd6be4e
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Mon Oct 24 18:32:19 2022 -0300
+
+    Merge branch 'main' of https://github.com/joaquinxtomas/grupo_12_Pixel
+
+[33mcommit 3aaff96f94495430b227067ddb4244a6fca52a83[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Mon Oct 24 18:32:16 2022 -0300
+
+    cambios ruta
+
+[33mcommit cd6be4e0174b097229014d2cf75f288160e089f1[m
+Author: ezeeze87 <eze87.m@gmail.com>
+Date:   Mon Oct 24 17:41:47 2022 -0300
+
+    pequeña correcion en carrito de compras
+
+[33mcommit 76bf6c903b55f45c483f3595782e0374a1dd91d8[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Mon Oct 24 02:03:50 2022 -0500
+
+    verificaciones en formularios de creacion de producto, se elimina etiqueta de descuento para productos sin descuento.
+
+[33mcommit 1e864a2ac16d73829603fce0926acf00a13dff11[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Sun Oct 23 21:37:10 2022 -0500
+
+    se modifican algunos elementos del register y el login para verificacion de formularios
+
+[33mcommit 3e558351fb3a144963ef0e839719295ccb3471d7[m
+Merge: e5858c3 b1c6cd0
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Sun Oct 23 18:26:28 2022 -0500
+
+    merge
+
+[33mcommit e5858c3dbe47750f6852f866bfae01ceea189f11[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Sun Oct 23 18:17:09 2022 -0500
+
+    merge de productos.json
+
+[33mcommit b1c6cd035d6c034b3564650502131e28fea1f6b1[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Sun Oct 23 20:13:31 2022 -0300
+
+    register
+
+[33mcommit 0ad10b9a8063efed015a368614fac5a1f20d8611[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Fri Oct 21 16:09:46 2022 -0300
+
+    Agrego proceso de register en base de datos
+
+[33mcommit e96945d941cd6c8bbc4808b8e16865aeb01e01ba[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Thu Oct 20 16:58:16 2022 -0300
+
+    arregle errores validaciones
+
+[33mcommit 88715bdebec350e8ceaea8dc1083d82945f3c845[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Thu Oct 20 16:33:40 2022 -0300
+
+    Agrego validaciones register
+
+[33mcommit 377dde3367a29946f48e9ae855ee5c80da489fde[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Thu Oct 20 00:56:36 2022 -0500
+
+    se añade estilo a botones del product/list
+
+[33mcommit 849a261487c36e73eb3d7625ac04f4002b509e0a[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Wed Oct 19 21:36:57 2022 -0500
+
+    se organiza estilo de product list
+
+[33mcommit e224eca9683844f4662caaf4e0dd7d47b65068d0[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Wed Oct 19 21:27:44 2022 -0500
+
+    se añade función de delete para productos
+
+[33mcommit f64f983a66b43a4bee2b731d72c275a804b91a60[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Wed Oct 19 16:52:38 2022 -0500
+
+    Se añade estructura para modificar productos PUT
+
+[33mcommit adec88011cc16fbb78e54fe329a3ac12e00df38e[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Sat Oct 15 19:26:32 2022 -0300
+
+    agrego multer
+
+[33mcommit 236e3029b5e3c88e3158c8b26e3aea84a00b3260[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Thu Oct 13 23:35:09 2022 -0300
+
+    CRUD 62%
+
+[33mcommit 359cd878d80b1f229ca161f0cb8876ac3150dc9a[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Thu Oct 13 23:27:38 2022 -0300
+
+    CRUD 60%
+
+[33mcommit 3c74a00fb791f647174df00720c4896238068e91[m
+Author: ezeeze87 <eze87.m@gmail.com>
+Date:   Tue Oct 11 17:50:26 2022 -0300
+
+    Generamos Objeto De Usuarios2
+
+[33mcommit 59a621e9da0f6dca8cc1f7668540ef99086a1183[m
+Author: ezeeze87 <eze87.m@gmail.com>
+Date:   Tue Oct 11 17:46:30 2022 -0300
+
+    Generamos Objeto De Usuarios
+
+[33mcommit 1782920a40c06e25ff9735fdfd3debf30402c071[m[33m ([m[1;33mtag: sprint3[m[33m)[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Thu Oct 6 15:44:13 2022 -0500
+
+    max-width para pantallas superiores al tamaño del banner de 1580 px
+
+[33mcommit 6a741f51c09ebc1b1669507e3284a216c8c8ace7[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Thu Oct 6 01:50:17 2022 -0500
+
+    headers unificados
+
+[33mcommit ff53f10374c6f5de96a8db7fd9687e2c28f2c944[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Thu Oct 6 01:02:57 2022 -0500
+
+    banner slider sin javascript
+
+[33mcommit 1d16f9040d4649c0b350fd35af7fd0b18358e4e8[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Wed Oct 5 15:54:08 2022 -0500
+
+     arreglados css, se añadio ../ en elementos necios
+
+[33mcommit 84a731379a605622939c0eeb13fbbe84d97e7237[m
+Merge: 59d9b0b 53ca112
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Wed Oct 5 15:31:12 2022 -0500
+
+    Merge branch 'main' of https://github.com/joaquinxtomas/grupo_12_Pixel
+
+[33mcommit 59d9b0b7cc69ca1f720b93d8011d00f897ea24f1[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Wed Oct 5 15:31:04 2022 -0500
+
+    archivo con routers actualizados pero con problemas en css
+
+[33mcommit 53ca1125b2ea4e6828b74c778d1583cb1315a355[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Wed Oct 5 16:52:33 2022 -0300
+
+    dibujo en register
+
+[33mcommit a97a8683d10be4981da073a757b15e83b44fb714[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Wed Oct 5 13:55:24 2022 -0300
+
+    Fondo img transparente
+
+[33mcommit bd324804db24fa108d5ba1d12ff594ed566a011d[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Tue Oct 4 00:20:40 2022 -0500
+
+    se arregla el link del logo para volver al index en todas las vistas
+
+[33mcommit 8922ce488f4ddecccd24a1f945f3492c5886013e[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Mon Oct 3 01:05:32 2022 -0500
+
+    se añade css del header, se modifican articulos ahora clickeables en todo el div
+
+[33mcommit 0168b3b6833ca7acb1ba69d74f24aa71c844df8f[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Sun Oct 2 23:27:06 2022 -0500
+
+    productos aleatorios y parametrizados en sección lo mejor del día
+
+[33mcommit d60a0c49528a1860569e438525e9704c0fd5e2e1[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Fri Sep 30 21:03:02 2022 -0500
+
+    comentario
+
+[33mcommit f6a325e3f29596d481b928046d9443c53aae9f07[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Fri Sep 30 21:00:13 2022 -0500
+
+    Se añade ruta de crear en router de productos
+
+[33mcommit 309d317e8d353290d53210c48e7f2f68a806356e[m
+Merge: 3ced687 8ee8c2b
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Fri Sep 30 20:33:15 2022 -0500
+
+    Merge branch 'main' of https://github.com/joaquinxtomas/grupo_12_Pixel
+
+[33mcommit 3ced687ba6b1df946a1d39195abb31a9e580a889[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Fri Sep 30 20:32:48 2022 -0500
+
+    se añaden imagenes de productos y vista de listado productList
+
+[33mcommit 8ee8c2b6c3ce79a530106a2d6c44e53dbf6801cd[m
+Merge: 559c48f 358403c
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Fri Sep 30 20:27:42 2022 -0300
+
+    agregar productos
+
+[33mcommit 559c48f8cf934f94a3b889e901bc0a3a45b43b98[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Fri Sep 30 20:15:44 2022 -0300
+
+    agregar producto
+
+[33mcommit 358403c03ab61d2023930bd0af103084f21161a5[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 30 18:04:39 2022 -0300
+
+    sprint 3
+
+[33mcommit 0ff54ec3b57f044798397d7194578953be67c281[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 30 17:56:59 2022 -0300
+
+    sprint 3 retrospectiva y daily
+
+[33mcommit e62572d12d04a4b27ce62d74ae9e5407c2aee42f[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 30 17:50:54 2022 -0300
+
+    sprint 3 retrospectiva y daily
+
+[33mcommit f4aa28ee181e48eb5d3c1cbcb0d0e2d3402482e8[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Fri Sep 30 13:43:09 2022 -0500
+
+    se añade rutador de productos y link de whatsapp
+
+[33mcommit 83bd7d007993760f4d472dad7667f2e74bb76c56[m
+Author: joaquinxtomas <jtppalacios@gmail.com>
+Date:   Fri Sep 30 15:37:30 2022 -0300
+
+    corrijoRegister
+
+[33mcommit 270add63dfaba3e605daaaf76b61b9c176743dc9[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 30 13:43:07 2022 -0300
+
+    sprint 3 con ejs
+
+[33mcommit f8dd26e4dd95ae77189bf8069486217c5886b1f5[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 30 13:38:24 2022 -0300
+
+    sprint 3 con ejs
+
+[33mcommit 2a51bd2fe09e9184c6f3085e785b52ad24a24d8f[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 30 13:32:01 2022 -0300
+
+    sprint 3 con ejs
+
+[33mcommit 3ff5bcf721078d6d2c5d03d1b1b0687ff1a85905[m
+Merge: cd6c14c 7dd21fb
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 30 13:31:05 2022 -0300
+
+    Merge branch 'main' of https://github.com/joaquinxtomas/grupo_12_Pixel
+
+[33mcommit cd6c14cfb7090f18dab09f976cae9ee06992e8c1[m
+Merge: 28e4231 1ab28e0
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 30 13:30:18 2022 -0300
+
+    sprint 3 con ejs
+
+[33mcommit 7dd21fbfb7a864a3b477752a13eab51e64d881c1[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Fri Sep 30 11:29:21 2022 -0500
+
+    comentarios de partials
+
+[33mcommit 28e4231feb25fc938b6ef407a1b5dbb3b55c625d[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 30 13:28:25 2022 -0300
+
+    sprint 3 con ejs
+
+[33mcommit 1ab28e0b1e334aac0a1ee55946814c049925ef59[m
+Merge: c411002 ace2b5b
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Fri Sep 30 11:24:42 2022 -0500
+
+    index y login con partials
+
+[33mcommit c411002012c5ddf8f029b03fd365361fb6c08ab0[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Fri Sep 30 11:11:57 2022 -0500
+
+    se arreglo header.ejs
+
+[33mcommit ace2b5b8d81209af9729f62cfc4f08dbe2de7812[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 30 11:19:56 2022 -0300
+
+    sprint 3 con ejs
+
+[33mcommit 4f8c7b08752fc860f900b5031026eb7a04920b85[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Thu Sep 29 18:22:52 2022 -0500
+
+    cambio de color de texto en productDetail
+
+[33mcommit 6de2ac7214b67f32a6ad028af1dfe50b948e6cd8[m
+Author: Jsalvar124 <jsalvar124@gmail.com>
+Date:   Thu Sep 29 18:15:35 2022 -0500
+
+    actualización del product detail
+
+[33mcommit 002380db88b42830c2640045a86880c6659b4544[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Thu Sep 29 18:30:01 2022 -0300
+
+    sprint 3 con ejs
+
+[33mcommit 63c525407077198d3244d6309cdc44b50313788d[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Thu Sep 29 18:28:45 2022 -0300
+
+    sprint 3 con ejs
+
+[33mcommit 564ecda6ad3be9e470731cc4d2c7522ab027f4b3[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Wed Sep 28 19:44:24 2022 -0300
+
+    sprint 3 con ejs
+
+[33mcommit 702090e768bfec6f478a3a7d792597fc18df618d[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Wed Sep 28 18:48:38 2022 -0300
+
+    sprint 3 en proceso el ejs
+
+[33mcommit 628944a212914131d2528b6cd16c191ebf7b8152[m[33m ([m[1;33mtag: sprint2[m[33m)[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 23 22:44:15 2022 -0300
+
+    sprint 2 completo
+
+[33mcommit 8c01f790d633c2a19ca58e5246ad8452741c7e05[m
+Merge: 94e9133 097f86f
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 23 22:14:04 2022 -0300
+
+    Merge branch 'main' of https://github.com/joaquinxtomas/grupo_12_Pixel
+
+[33mcommit 94e9133837343efce76c3fe3219f139048b84b9c[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 23 22:13:32 2022 -0300
+
+    sprint 2 completo
+
+[33mcommit 097f86f5d6d2e4660a61acbfcb550beb7bee3146[m
+Author: Julián Salvá <97143743+Jsalvar124@users.noreply.github.com>
+Date:   Fri Sep 23 19:58:55 2022 -0500
+
+    Update retro.md
+
+[33mcommit 956004c1c84823bdfd5e4a9c564779c32defbc02[m
+Author: ezeeze87 <eze87.m@gmail.com>
+Date:   Fri Sep 23 21:01:46 2022 -0300
+
+    Solucino Detalles
+
+[33mcommit c5521b85a5cc5cb20ca2d99834577c644c33e2d1[m
+Author: ezeeze87 <eze87.m@gmail.com>
+Date:   Fri Sep 23 20:31:53 2022 -0300
+
+    Agrego links a las imagenes del index
+
+[33mcommit 7f95cbd7ee3b947cc074058d2bd0b502fac4580b[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 23 20:17:13 2022 -0300
+
+    sprint 2
+
+[33mcommit 1d7e73d367154822859a07ae7bf1375b08ade9cf[m
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 23 19:31:41 2022 -0300
+
+    sprint 2
+
+[33mcommit 3f05064c7e1231bbd4356b5f23770af84111daf4[m
+Merge: 339f389 87821d7
+Author: AdrielAnizan <adrielanizan9@gmail.com>
+Date:   Fri Sep 23 18:08:29 2022 -0300
+
+    Merge branch 'main' of https://github.com/joaquinxtomas/grupo_12_Pixel

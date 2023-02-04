@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/addProduct.css">
+    <title>Pixel E-Comerce</title>
+</head>
+
+<body>
+
+    <!--  HEADER -->
+    <%- include ("partials/header") %>
+        <!--  HEADER -->
+
+        <main>
+            <form action="/product/create" method="POST" enctype="multipart/form-data" id="formAdd">
+                <div class="caja-padre">
+                    <ul id="erroresProductos" style="border-radius: 10px; color: #FF4949; padding: 5px; list-style-type: none;"></ul>
+                    <div class="añadir-producto" id="añadir-producto">
+                        <h2>Añadir producto</h2>
+                    </div>
+
+                    <div>
+                        <input 
+                        type="text" 
+                        name="titulo" 
+                        id="titulo"
+                        placeholder="Nombre del producto" 
+                        class = "normal-input <%= locals.errors && errors.titulo ? 'invalido' : null%>" 
+                        value="<%= locals.oldData ? oldData.titulo : null %>">
+                    </div>
+                    <% if (locals.errors && errors.titulo) { %>
+                        <div class="mensaje-de-error">
+                            <i class="fas fa-exclamation-triangle"></i><%= errors.titulo.msg %> 
+                        
+                        </div> 
+                    <% } %> 
+
+
+                    <div>
+                        <input 
+                        type="text" 
+                        name="descripcionCorta" 
+                        placeholder="Descripcion breve" 
+                        id="description" 
+                        class = "normal-input <%= locals.errors && errors.descripcionCorta ? 'invalido' : null%>" 
+                        value="<%= locals.oldData ? oldData.descripcionCorta : null %>">
+                    </div>
+                    <% if (locals.errors && errors.descripcionCorta) { %>
+                        <div class="mensaje-de-error">
+                            <i class="fas fa-exclamation-triangle"></i><%= errors.descripcionCorta.msg %> 
+                        
+                        </div> 
+                    <% } %> 
+
+                    <div>
+                        <textarea 
+                        class="large-description" 
+                        name="longDesc" 
+                        placeholder="Descripcion detallada"
+                        id="large-description"><%= locals.oldData ? oldData.longDesc : null %></textarea>
+                    </div>
+                    <% if (locals.errors && errors.longDesc) { %>
+                        <div class="mensaje-de-error">
+                            <i class="fas fa-exclamation-triangle"></i><%= errors.longDesc.msg %> 
+                        
+                        </div> 
+                    <% } %> 
+
+                    <div class="previsualización">
+                        <img id="imgPreview">
+                    </div>
+                    <h4 class="aclaracion">Imagen del producto</h4>
+                    <div class="contenedor-file">
+                        <label for="archivo">Elige un archivo 
+                            <i class="fa-regular fa-folder-open"></i>
+                        </label>
+                        <input type="file" id="archivo" name="img" accept=".png, .jpg" onchange="previewImage(event,'#imgPreview')">
+                        <h3 id="nombre"></h3>
+                    </div>
+
+                    <div>
+                        <select class="category" name="categoria" id="category">
+                            <option value="" disabled selected hidden>Elige una categoría</option>
+                            <option value="Computadores"  <%= locals.oldData && oldData.categoria=="Computadores" ? "selected" : null %>>Computadores</option>
+                            <option value="Notebooks" <%= locals.oldData && oldData.categoria=="Notebooks" ? "selected" : null %>>Notebooks</option>
+                            <option value="Monitores" <%= locals.oldData && oldData.categoria=="Monitores" ? "selected" : null %>>Monitores</option>
+                            <option value="Teclados" <%= locals.oldData && oldData.categoria=="Teclados" ? "selected" : null %>>Teclados</option>
+                            <option value="Mouse" <%= locals.oldData && oldData.categoria=="Mouse" ? "selected" : null %>>Mouse</option>
+                        </select>
+                    </div>
+                    <% if (locals.errors && errors.categoria) { %>
+                        <div class="mensaje-de-error">
+                            <i class="fas fa-exclamation-triangle"></i><%= errors.categoria.msg %> 
+                        
+                        </div> 
+                    <% } %> 
+
+                    <div>
+                        <input 
+                        type="number" 
+                        name="precio" 
+                        placeholder="Precio" 
+                        class = "normal-input <%= locals.errors && errors.precio ? 'invalido' : null%>"
+                        value="<%= locals.oldData ? oldData.precio : null %>">
+                    </div>
+                    <% if (locals.errors && errors.precio) { %>
+                        <div class="mensaje-de-error">
+                            <i class="fas fa-exclamation-triangle"></i><%= errors.precio.msg %> 
+                        
+                        </div> 
+                    <% } %> 
+
+                    <div>
+                        <input 
+                        type="number" 
+                        name="descuento" 
+                        placeholder="Descuento" 
+                        class = "normal-input <%= locals.errors && errors.descuento ? 'invalido' : null%>"
+                        value="<%= locals.oldData ? oldData.descuento : null %>">
+                    </div>
+                    <% if (locals.errors && errors.descuento) { %>
+                        <div class="mensaje-de-error">
+                            <i class="fas fa-exclamation-triangle"></i><%= errors.descuento.msg %> 
+                        
+                        </div> 
+                    <% } %> 
+
+                    <div class="botonera">
+                        <div>
+                            <button class="agregar" type="submit" id="open">Agregar (+)</button>
+                        </div>
+                        <div>
+                            <button class="borrar" type="reset">Borrar datos</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+
+            <script type="text/javascript">
+                let archivo = document.querySelector('#archivo');
+                archivo.addEventListener('change',()=>{
+                    document.querySelector('#nombre').innerText = 
+                    archivo.files[0].name
+                });
+
+                function previewImage(event, querySelector){
+                    const input = event.target;
+                    $imgPreview = document.querySelector(querySelector)
+                    if(!input.files.length)return
+                    file = input.files[0];
+                    objectURL=URL.createObjectURL(file);
+                    $imgPreview.src = objectURL
+                }
+            </script>
+        </main>
+
+        <!-- WHATSAPP -->
+        <%- include('./partials/whatsapp'); %>
+
+            <!-- FOOTER -->
+            <%- include('./partials/footer'); %>
+
+            <script src="/js/addProduct.js"></script>
+
+
+
+</body>

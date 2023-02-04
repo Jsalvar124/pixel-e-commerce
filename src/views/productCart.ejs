@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/productCart.css">
+    <title>Tus Compras</title>
+</head>
+
+<body>
+    <%- include('./partials/header'); %>
+    <main>
+        <h2>Mi carrito</h2>
+        <article>
+            <form action="/productCart" method="get" class="formulario-padre">
+                <section><p class="d">Descripción</p><p class="p-precio">Precio</p><p>Cantidad de productos</p></section>
+                <div class="productInfo">
+                    <img src="/img/lenovo.png" alt="producto">
+                    <p class="description">Laptop Lenovo</p>
+                    <p class="price">$137.500</p>
+                   
+                    <input type="number" id="numero" class="boton">
+                    <button class="boton" type="reset"><i class="fa-solid fa-trash"></i></button>
+                </div>
+
+                <div class="productInfo">
+                    <img src="/img/bangho.png" alt="producto">
+
+                    <p class="description">Laptop Bangho</p>
+                    <p class="price">$145.999</p>
+                   
+                    <input type="number" id="numero" class="boton">
+                    <button class="boton" type="reset"><i class="fa-solid fa-trash"></i></button>
+                </div>
+                <div class="medios-de-pago-padre" >
+                    <p>Medios de medios de pago</p>
+                    <label>
+                        <input type="radio" name="medios-de-pago" class="medios-de-pago" value="deposito-trasferencia">
+                        Deposito o Transferencia Bancaria</label><br>
+                    <label><input type="radio" name="medios-de-pago" class="medios-de-pago" value="mercado-pago">
+                        Mercadopago - Tarjetas Online, PagoFacil, RapiPago</label><br>
+                    <label><input type="radio" name="medios-de-pago" class="medios-de-pago" value="pago-gamer">
+                        Pago Gamer - Tarjetas Visa o MasterCard</label><br>
+                </div>
+                <p>Total $283.499</p>
+                <button class="boton-compra" type="submit">Comprar</button>
+
+            </form>
+        </article>
+        </div>
+        <%- include('./partials/whatsapp'); %>
+    </main>
+    <%- include('./partials/footer'); %>
+</body>
+
+</html>

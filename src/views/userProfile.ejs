@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Pixel E-Comerce</title>
+</head>
+
+<body>
+
+    <!--  HEADER -->
+    <%- include ("partials/header") %>
+        <!--  HEADER -->
+
+
+        <main>
+            <section>
+            <div class="contenedor-profile">
+            <div>
+                <h1>Hola, <%= user.fullName %>!</h1>
+            </div>
+            <div class="avatar">
+                <img src="/img/avatar/<%=user.avatar%>" alt="avatar">
+            </div>
+
+            <div class="data-user">
+                <p>Nombre: <%= user.fullName %>  
+                </p>
+                <p>Username: <%= user.userName %>  
+                </p>
+                <p>Email: <%= user.email %>  
+                </p>
+            </div>
+            <div class="pedidos">
+                <a href="">Mis pedidos</a>
+            </div>
+
+            <div class="cerrar-sesion">
+                <a href="/user/logout" id="logout">Cerrar sesión</a>
+                <a href="/user/profile/edit/<%= user.id %> ">Editar</a>
+            </div>
+<!--             <div class="cerrar-sesion">
+                <a href="/user/profile/edit/<%= user.id %> ">Editar</a>
+            </div> -->
+<!--             <form action="" method="POST">
+                <div class="borrarCuenta">
+                    <button type="submit">Borrar cuenta</button>
+                </div>
+            </form> -->
+        </div>
+    </section>
+        </main>
+
+
+         <!-- WHATSAPP -->
+         <%- include('./partials/whatsapp'); %>
+
+         <!-- FOOTER -->
+         <%- include('./partials/footer'); %>
+
+         <script src="/js/alert.js"></script>
+        </body>
+</html>

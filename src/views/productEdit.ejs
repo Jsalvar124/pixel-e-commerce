@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/addProduct.css">
+    <title>Pixel E-Comerce</title>
+</head>
+
+<body>
+
+    <!--  HEADER -->
+    <%- include ("partials/header") %>
+        <!--  HEADER -->
+
+        <main>
+            <form  method="POST" action="/product/edit/<%= producto.id %>?_method=PUT" enctype="multipart/form-data"> <!-- se añade query string para PUT y enctype para imagenes-->
+                <div class="caja-padre">
+                    <div class="añadir-producto">
+                        <h2>Estás editando el producto <%= producto.id %> </h2>
+                    </div>
+
+                    <div>
+                        <input 
+                        type="text" 
+                        name="titulo" 
+                        placeholder="Nombre del producto"
+                        class = "normal-input <%= locals.errors && errors.titulo ? 'invalido' : null%>"  
+                        value="<%= producto.titulo %>" >
+                    </div>
+
+                    <div>
+                        <input 
+                        type="text" 
+                        name="descripcionCorta" 
+                        placeholder="Descripcion breve" 
+                        id="description"
+                        class = "normal-input <%= locals.errors && errors.titulo ? 'invalido' : null%>"  
+                        value="<%= producto.descripcionCorta %>" >
+                    </div>
+
+                    <div>
+                        <textarea 
+                        class= "large-description <%= locals.errors && errors.longDesc ? 'invalido' : null%>" 
+                        name="longDesc" 
+                        placeholder="Descripcion extensa" 
+                        value="<%=producto.longDesc %>"
+                        id="large-description"  ><%=producto.longDesc %></textarea>
+                    </div>
+
+
+                    <h4 class="aclaracion">Imagen del producto</h4>
+                    <div class="contenedor-file">
+                        <label for="archivo">Elige un archivo 
+                            <i class="fa-regular fa-folder-open"></i>
+                        </label>
+                        <input type="file" id="archivo" name="img" accept=".png, .jpg">
+                        <h3 id="nombre"></h3>
+                    </div>
+
+                    <div>
+                        <select class="category" name="categoria" id="category" value= <%= producto.categoria %> >
+                            <option value="Computadores">Computadores</option>
+                            <option value="Notebooks">Notebooks</option>
+                            <option value="Monitores">Monitores</option>
+                            <option value="Teclados">Teclados</option>
+                            <option value="Mouse">Mouse</option> <!-- ASIGNAR OLD PARA CATEGORIA -->
+                        </select>
+                    </div>
+
+                    <div>
+                        <input 
+                        type="number" 
+                        name="precio" 
+                        placeholder="Precio"
+                        class = "normal-input <%= locals.errors && errors.titulo ? 'invalido' : null%>" 
+                        value=<%=producto.precio %> >
+                    </div>
+
+                    <div>
+                        <input 
+                        type="number" 
+                        name="descuento" 
+                        placeholder="Descuento" 
+                        class = "normal-input <%= locals.errors && errors.titulo ? 'invalido' : null%>" 
+                        value=<%= producto.descuento %>>
+                    </div>
+
+                    <div class="botonera">
+                        <div>
+                            <button class="agregar" type="submit">Editar</button>
+                        </div>
+                        <div>
+                            <button class="borrar" type="reset">Borrar datos</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
+            <script type="text/javascript">
+                let archivo = document.querySelector('#archivo');
+                archivo.addEventListener('change',()=>{
+                    document.querySelector('#nombre').innerText = 
+                    archivo.files[0].name
+                });
+            </script>
+        </main>
+
+        <!-- WHATSAPP -->
+        <%- include('./partials/whatsapp'); %>
+
+            <!-- FOOTER -->
+            <%- include('./partials/footer'); %>
+
+
+
+</body>

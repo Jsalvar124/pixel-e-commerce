@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/productList.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:ital@1&family=Roboto:ital,wght@0,100;1,100&display=swap"
+    rel="stylesheet">
+    <title>Pixel E-Comerce</title>
+</head>
+
+<body>
+
+    <!-- HEADER AND NAVIGATION BAR-->
+    <%- include('partials/header') %>
+        <!-- BANNER -->
+        <!--         <div class="banner">
+            <img src="/img/banner2.jpg" alt="banner">
+            <i class="fa-solid fa-angle-left" id="left"></i>
+            <i class="fa-solid fa-angle-right" id="right"></i>
+            <div class="dots">
+                <i class="fa-solid fa-circle" id="bn1"></i>
+                <i class="fa-solid fa-circle" id="bn2"></i>
+                <i class="fa-solid fa-circle" id="bn3"></i>
+            </div>
+            <img src="/img/banner2.jpg" alt="banner"> -->
+
+        </div>
+        <main>
+
+            <section class="Category">
+
+                <h2>Productos </h2>
+
+                    <div class="add-button">
+                        <a href="/product/create"><p>Agregar producto</p></a>
+                    </div>
+
+                <div class="products">
+                    <% productos.forEach(producto=> { %>
+
+                    <% let valorFinal=producto.precio-(producto.precio*producto.descuento)/100 %> 
+                    
+                        <article>
+                            <div class="container-top">
+                                <img src=<%="/img/" +producto.img %> alt="producto">
+                                <div class="productInfo">
+                                    <a href="/product/detail/<%= producto.id %> " class="productName">
+                                        <%= producto.titulo %>
+                                    </a>
+                                    <p class="final-value">
+                                        $<%= valorFinal.toFixed(0) %>
+                                    </p>
+                                    <% if (producto.descuento!=0) { %>
+                                        <p class="discount" > 
+                                            <%= producto.descuento %> %OFF
+                                        </p>
+                                        <p class="price">
+                                            $<%= producto.precio %>
+                                        </p>
+                                    <% } else { %>
+                                     <br>
+                                     <br>
+                                        <% } %>
+
+                                    <p class="short-description">
+                                        <%= producto.descripcionCorta %>
+                                    </p>
+                                    <p class="long-description">
+                                        <%= producto.descripcionDetallada %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="edit-button-container">
+                                <a href="/product/edit/<%= producto.id %> " class="edit-button">Editar</a>
+                            </div>
+
+                            <form action="/product/delete/<%= producto.id %>?_method=DELETE" method="POST" >
+                                <button type="submit" class="action-button-delete" onclick="return confirm('Está seguro que desea eliminar <%= producto.titulo %>?');">Eliminar</button>
+                            </form>
+                        </article>
+                        <% }) %>
+                </div>
+            </section>
+
+
+
+        </main>
+        </div>
+        </section>
+        <!-- WHATSAPP -->
+        <%- include('./partials/whatsapp'); %>
+
+
+            </main>
+            <!-- FOOTER -->
+            <%- include('./partials/footer'); %>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/register.css"> <!-- se modifica añadiendo ../ -->
+    <script src="https://kit.fontawesome.com/d47e928f31.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:ital@1&family=Roboto:ital,wght@0,100;1,100&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <%- include('./partials/header'); %>
+
+        <div class="banner">
+            <img src="/img/banner2.jpg" alt="banner">
+            <i class="fa-solid fa-angle-left" id="left"></i>
+            <i class="fa-solid fa-angle-right" id="right"></i>
+            <div class="dots">
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+            </div>
+            <!-- <img src="/img/banner2.jpg" alt="banner"> -->
+
+        </div>
+
+        </header>
+        <main>
+
+            <form action="/user/register" method="POST" enctype="multipart/form-data" id="form-registro">
+                <div class="caja-padre">
+                    <div class="registrate">
+                        <h2>¡Registrate!</h2>
+                        <img src="/img/form.svg" alt="undraw-form">
+                    </div>
+
+                    <div>
+                        <ul id="listaErrores" style="border-radius: 10px; color: #FF4949; padding: 5px; list-style-type: none;"></ul>
+                    </div>
+                    <div>
+                        <input type="text" name="fullName" placeholder="Nombre y apellido" id="nombre-apellido"
+                            class="normal-input  <%= locals.errors && errors.fullName ? 'invalido' : null%> "
+                            value="<%= locals.oldData ? oldData.fullName : null %>">
+
+                    </div>
+                    <% if (locals.errors && errors.fullName) { %>
+                        <div class="mensaje-de-error">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <%= errors.fullName.msg %>
+
+                        </div>
+                        <% } %>
+
+                            <div>
+                                <input type="text" name="userName" placeholder="Nombre de usuario" id="userName"
+                                    class="normal-input <%= locals.errors && errors.userName ? 'invalido' : null%> "
+                                    value="<%= locals.oldData ? oldData.userName : null %>">
+                            </div>
+                            <% if (locals.errors && errors.userName) { %>
+                                <div class="mensaje-de-error">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <%= errors.userName.msg %>
+
+                                </div>
+                                <% } %>
+
+                                    <div>
+                                        <!-- Cambio a TEXT para validacion de front -->
+                                        <input type="text" name="email" placeholder="E-mail" id="email"
+                                            class="normal-input  <%= locals.errors && errors.email ? 'invalido' : null%> "
+                                            value="<%= locals.oldData ? oldData.email : null %>">
+                                    </div>
+                                    <% if (locals.errors && errors.email) { %>
+                                        <div class="mensaje-de-error">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                            <%= errors.email.msg %>
+
+                                        </div>
+                                        <% } %>
+
+                                            <div>
+                                                <h4 class="aclaracion-1">Fecha de nacimiento</h4>
+                                                <input type="date" name="dateOfBirth" id="nacimiento"
+                                                    class="normal-input">
+                                            </div>
+
+                                            <div>
+                                                <input type="text" name="address" placeholder="Domicilio" id="address"
+                                                    class="normal-input  <%= locals.errors && errors.address ? 'invalido' : null%> "
+                                                    value="<%= locals.oldData ? oldData.address : null %>">
+                                            </div>
+                                            <% if (locals.errors && errors.address) { %>
+                                                <div class="mensaje-de-error">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                    <%= errors.address.msg %>
+
+                                                </div>
+                                                <% } %>
+
+
+
+                                                    <div>
+                                                        <h4 class="aclaracion">Foto de usuario</h4>
+                                                        <div class="contenedor-file">
+
+                                                            <label for="archivo">Elige un archivo
+                                                                <i class="fa-regular fa-folder-open"></i>
+                                                            </label>
+                                                            <input type="file" id="archivo" name="avatar"
+                                                                accept=".png, .jpg">
+                                                            <h3 id="nombre"></h3>
+                                                        </div>
+                                                        <% if(locals.errors && errors.userImg){ %>
+                                                            <div class="mensaje-de-errorImg">
+                                                                <i class="fas fa-exclamation-triangle"></i>
+                                                                <%= errors.userImg.msg %>
+                                                            </div>
+                                                            <% } %>
+
+                                                                <div class="contraseña">
+                                                                    <input type="password" name="password"
+                                                                        placeholder="Contraseña" id="password"
+                                                                        class="normal-input  <%= locals.errors && errors.password? 'invalido' : null%>">
+                                                                </div>
+                                                                <% if (locals.errors && errors.password) { %>
+                                                                    <div class="mensaje-de-error">
+                                                                        <i class="fas fa-exclamation-triangle"></i>
+                                                                        <%= errors.password.msg %>
+
+                                                                    </div>
+                                                                    <% } %>
+
+                                                                        <div class="contraseña">
+                                                                            <input type="password"
+                                                                                name="passwordConfirm" id="re-password"
+                                                                                placeholder="Confirmar contraseña"
+                                                                                class="normal-input  <%= locals.errors && errors.passwordConfirm ? 'invalido' : null%>">
+                                                                        </div>
+                                                                        <% if (locals.errors && errors.passwordConfirm)
+                                                                            { %>
+                                                                            <div class="mensaje-de-error">
+                                                                                <i
+                                                                                    class="fas fa-exclamation-triangle"></i>
+                                                                                <%= errors.passwordConfirm.msg %>
+
+                                                                            </div>
+                                                                            <% } %>
+
+                                                                                <div>
+                                                                                    <button class="enviar"
+                                                                                        type="submit">Enviar</button>
+                                                                                </div>
+                                                                                <div class="borrar-datos">
+                                                                                    <button class="borrar"
+                                                                                        type="reset">Borrar
+                                                                                        datos</button>
+                                                                                </div>
+
+                                                                                <div class="ingreso">
+                                                                                    <h5 class="google">Ingresar con
+                                                                                        Google
+                                                                                        <i class="fab fa-google"></i>
+                                                                                    </h5>
+                                                                                    <h5 class="facebook">Ingresar con
+                                                                                        Facebook
+                                                                                        <i
+                                                                                            class="fab fa-facebook-square"></i>
+                                                                                    </h5>
+                                                                                </div>
+                                                    </div>
+
+            </form>
+
+            <script type="text/javascript">
+                let archivo = document.querySelector('#archivo');
+                archivo.addEventListener('change', () => {
+                    document.querySelector('#nombre').innerText =
+                        archivo.files[0].name
+                });
+
+                function previewImage(event, querySelector) {
+                    const input = event.target;
+                    $imgPreview = document.querySelector(querySelector)
+                    if (!input.files.length) return
+                    file = input.files[0];
+                    objectURL = URL.createObjectURL(file);
+                    $imgPreview.src = objectURL
+                }
+            </script>
+
+            <script src="/js/validator.js"></script>
+
+            <%- include('./partials/whatsapp'); %>
+        </main>
+        <%- include('./partials/footer'); %>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.card-userPixel {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.card-userPixel article {
+    width: 100%;
+    margin:30px;
+    padding: 15px;
+    background:linear-gradient(transparent, grey);
+    display: flex;
+    border-radius: 5px;
+    border-bottom: 5px solid #7EFF00;
+}
+
+.image-userPixel{
+    width: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #7EFF00;
+    transition: all .3s;
+}
+
+.image-userPixel-george{
+    width: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid #7EFF00;
+    transition: all .3s;
+}
+
+.image-userPixel-last {
+    width: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #7EFF00;
+    transition: all .3s;
+    filter: grayscale();
+}
+
+.card-userPixel article:hover .image-userPixel {
+    filter: none;
+}
+
+.container-userPixel{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-left: 10px;
+    font-size: .7rem;
+}
+
+
+@media (min-width:576px){
+    .card-userPixel article{
+        width: 60%;
+    }
+}
+
+@media (min-width:768px){
+    .card-userPixel article{
+        width: 40%;
+    }
+}
+
+@media (min-width:1020px){
+    .container-userPixel{
+        font-size: 1rem;
+    }
+}
