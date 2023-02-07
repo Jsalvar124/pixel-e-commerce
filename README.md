@@ -1,6 +1,6 @@
+URL: https://pixel-commerce.onrender.com/
+
 Comando para iniciar la página: npm run dev
-
-
 
 Comando para iniciar el front (React): npm start
 
